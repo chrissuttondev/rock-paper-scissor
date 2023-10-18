@@ -4,7 +4,7 @@ import random
 
 while True:
     choices = ["r", "p", "s"]
-    cc = "r"
+    cc = random.choice(choices)
     cc_score = []
     target_length = 3
     uc_score = []
@@ -18,9 +18,6 @@ while True:
             print("Please try again. Enter 'r', 'p' or 's'")
         else:
             break
-    print(uc)
-    print(cc)
-
     # if / elif statement to compare uc and cc
 
     if uc == cc:
@@ -43,3 +40,12 @@ while True:
     elif uc == "s" and cc == "p":
         print("You win")
         uc_score.append("w")
+    print(f"Computer chose {cc}")
+    print(f"You chose {uc}")
+    print(f"Computer score {cc_score}")
+    print(f"Your score {uc_score}")
+    if cc_score == target_length:
+        print("Unlucky, Computer wins the game")
+    elif uc_score == target_length:
+        print("Well done, you win the game")
+        break
