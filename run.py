@@ -3,8 +3,9 @@ import random
 
 choices = ["r", "p", "s"]
 cc = "r"
+# Input validation need. If uci not r,p or s
 
 uci = input("make your guess by typing 'r', 'p' or 's':")
 uc = uci.lower()
-print(uc)
-print(cc)
+if uci not in choices:
+    print("Please try again. Enter 'r', 'p' or 's'")
