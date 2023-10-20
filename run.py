@@ -2,14 +2,13 @@ import random
 # Rock, paper, scissors game vs computer
 # Rock
 
+cc_score = []
+uc_score = []
+
+
 while True:
     choices = ["r", "p", "s"]
     cc = random.choice(choices)
-    cc_score = []
-    target_length = 3
-    uc_score = []
-    target_length = 3
-
     # while loop checks if input. Loops is broken when input is r, s or p.
     while True:
         uci = input("make your guess by typing 'r', 'p' or 's':")
@@ -44,8 +43,10 @@ while True:
     print(f"You chose {uc}")
     print(f"Computer score {cc_score}")
     print(f"Your score {uc_score}")
-    if cc_score == target_length:
+    if  len(cc_score) == 3:   
         print("Unlucky, Computer wins the game")
-    elif uc_score == target_length:
+        break
+    elif len(uc_score) == 3: 
         print("Well done, you win the game")
         break
+        
