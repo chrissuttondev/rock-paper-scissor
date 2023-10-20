@@ -5,7 +5,6 @@ import random
 cc_score = []
 uc_score = []
 
-
 while True:
     choices = ["r", "p", "s"]
     cc = random.choice(choices)
@@ -43,10 +42,10 @@ while True:
     print(f"You chose {uc}")
     print(f"Computer score {cc_score}")
     print(f"Your score {uc_score}")
-    if  len(cc_score) == 3:   
+    if  len(cc_score) == 3:  
         print("Unlucky, Computer wins the game")
         break
-    elif len(uc_score) == 3: 
+    elif len(uc_score) == 3:
         print("Well done, you win the game")
         break
-        
+# Logic works but could be less verbose. No functions in entire code.
